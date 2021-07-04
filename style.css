@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vw;
+  background-color: bisque;
+}
+form {
+  background-color: #fff;
+  width: 450px;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+form header {
+  font-size: 28px;
+  font-weight: 500;
+  color: #7d2ae8;
+  text-align: center;
+  margin-top: 10px;
+}
+
+form .url-input {
+  margin: 30px 0;
+}
+.url-input .title {
+  font-size: 18px;
+  color: #373737;
+}
+
+.url-input .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 5px;
+  position: relative;
+}
+
+.url-input .field input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 15px;
+  background-color: #f1f1f7;
+  border-bottom: 2px solid #ccc;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.url-input .field .botton-line {
+  height: 2px;
+  width: 100%;
+  background-color: #7d2ae8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.url-input .field input:focus ~ .botton-line,
+.url-input .field input:valid ~ .botton-line {
+  transform: scale(1);
+}
+
+form .preview-area {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px dashed #7d2ae8;
+}
+.preview-area.Active {
+    
+  border: none;
+}
+.preview-area .thumbnail {
+  width: 100%;
+  border-radius: 5px;
+  display: none;
+}
+.preview-area.Active .thumbnail {
+  display: block;
+}
+.preview-area .icon {
+  color: #7d2ae8;
+  font-size: 80px;
+}
+
+.preview-area span {
+  color: #7d2ae8;
+  margin-top: 20px;
+}
+
+.preview-area.Active .icon,
+.preview-area.Active span {
+  display: none;
+}
+
+form .download-btn {
+  height: 53px;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #7d2ae8;
+  border-radius: 5px;
+  margin: 30px 0 20px 0;
+  cursor: pointer;
+}
